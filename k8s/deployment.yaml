@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hostel-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hostel-app
+  template:
+    metadata:
+      labels:
+        app: hostel-app
+    spec:
+      containers:
+      - name: hostel-app
+        image: YOUR_DOCKERHUB_USERNAME/hostel-app:latest
+        ports:
+        - containerPort: 80
