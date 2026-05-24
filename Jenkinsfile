@@ -9,7 +9,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/itzzoya/DevopsHostelapp.git'
+                git 'https://github.com/itzzoya/cicdproject.git'
             }
         }
 
